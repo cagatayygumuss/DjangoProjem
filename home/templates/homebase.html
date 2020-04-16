@@ -2,39 +2,37 @@
 <html lang="en">
 {% load static %}
 <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>OGY GROCERY</title>
-    <meta name="keywords" content="{% block keywords %} Anasayfa Anahtar Kelimeler {% endblock %}">
-    <meta name="description" content="{% block description %} Anasayfa Anahtar Kelimeler {% endblock %}">
-
-
-    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
+     <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title> {% block title %} MySite  {%  endblock %}</title>
+        <meta name="keywords" content="{% block keywords %} Anasayfa Anahtar Kelimeler {% endblock %}">
+        <meta name="description" content="{% block description %} Anasayfa Anahtar Kelimeler {% endblock %}">
 
 
+        <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css'%}" />
-    <link rel="stylesheet" href="{% static 'css/animate.css'%}" />
 
-    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css'%}" />
-    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css'%}" />
-    <link rel="stylesheet" href="{% static 'css/magnific-popup.css'%}" />
 
-    <link rel="stylesheet" href="{% static 'css/aos.css'%}" />
+        <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css'%}" />
+        <link rel="stylesheet" href="{% static 'css/animate.css'%}" />
 
-    <link rel="stylesheet" href="{% static 'css/ionicons.min.css'%}" />
+        <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css'%}" />
+        <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css'%}" />
+        <link rel="stylesheet" href="{% static 'css/magnific-popup.css'%}" />
 
-    <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css'%}" />
-    <link rel="stylesheet" href="{% static 'css/jquery.timepicker.css'%}" />
+        <link rel="stylesheet" href="{% static 'css/aos.css'%}" />
 
-    <link rel="stylesheet" href="{% static 'css/flaticon.css'%}" />
-    <link rel="stylesheet" href="{% static 'css/icomoon.css'%}" />
-    <link rel="stylesheet" href="{% static 'css/style.css'%}" />
+        <link rel="stylesheet" href="{% static 'css/ionicons.min.css'%}" />
 
-    <!--   { % block head % }  { %  endblock % } -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css'%}" />
+        <link rel="stylesheet" href="{% static 'css/jquery.timepicker.css'%}" />
+
+        <link rel="stylesheet" href="{% static 'css/flaticon.css'%}" />
+        <link rel="stylesheet" href="{% static 'css/icomoon.css'%}" />
+        <link rel="stylesheet" href="{% static 'css/style.css'%}" />
+     <!--{% block head %}  {%  endblock %} -->
 </head>
 
 <body>
@@ -47,7 +45,7 @@
 { % block slider % }  { % endblock % }
 { % block content % } { % endblock % } -->
 {% include 'footer.html'%}
-{ % block foot % } { % endblock % }
+{% block foot %} {% endblock %}
 
 
 
