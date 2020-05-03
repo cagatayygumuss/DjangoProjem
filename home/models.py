@@ -37,8 +37,8 @@ class Setting(models.Model):
 class ContactFormMessage(models.Model):
     STATUS= (
         ('New','New'),
-        ('Read','Read')
-        ('Closed', 'Closed')
+        ('Read','Read'),
+        ('Closed','Closed'),
     )
     name= models.CharField(max_length=20)
     email= models.CharField(max_length=50)
