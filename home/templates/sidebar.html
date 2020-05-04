@@ -5,10 +5,20 @@
 	<div class="sidebar-box ftco-animate">
 		<h3 class="heading">Categories</h3>
 		<ul class="categories">
-			<li><a href="#">Vegetables</a></li>
-			<li><a href="#">Fruits</a></li>
-			<li><a href="#">Juice</a></li>
-			<li><a href="#">Dries</a></li>
+			<li>{% load mptt_tags %}
+				<ul>
+
+					{% recursetree category %}
+					<li>
+						<a href="/category/{{ node.slug }}">{{ node.title }} </a>
+						{% if not node.is_leaf_node %}
+						<ul class="children">
+							<a href="/category/{{ node.slug }}"> {{ children }} </a>
+						</ul>
+						{% endif %}
+					</li>
+					{% endrecursetree %}
+				</ul></li>
 		</ul>
 	</div>
 
