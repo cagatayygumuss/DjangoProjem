@@ -11,31 +11,7 @@
 
 				<li class="nav-item active"><a href="/" class="nav-link">Anasayfa</a></li>
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Yemekler</a>
-					<div class="dropdown-menu" aria-labelledby="dropdown04">
-						{% load mptt_tags %}
-						<ul>
-							{% recursetree category %}
-							<li>
-								<a href="/category/{{ node.slug }}">{{ node.title }} </a>
-								{% if not node.is_leaf_node %}
-								<ul class="children">
-									<a href="/category/{{ node.slug }}"> {{ children }} </a>
-								</ul>
-								{% endif %}
-							</li>
-							{% endrecursetree %}
-						</ul>
-
-					</div>
 				</li>
-
-
-
-
-
-
-
 
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>

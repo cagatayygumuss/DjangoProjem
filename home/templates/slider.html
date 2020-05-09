@@ -2,8 +2,9 @@
 {% load static %}
 
 <section id="home-section" class="hero">
-	{% for rs in sliderdata %}
+
 	<div class="home-slider owl-carousel">
+		{% for rs in sliderdata %}
 		<!--<div class="slider-item">-->
 
 
@@ -13,7 +14,7 @@
 
 				<h1 class="mb-2">{{ rs.title }}</h1>
 				<h2 class="subheading mb-4">{{ rs.description }}</h2>
-				<p><a href="/product/{{ rs.id }}/{{ rs.slug }}" class="btn btn-primary">Ayrintili Incele</a></p>
+					<p><a href="/product/{{ rs.id }}/{{ rs.slug }}" class="btn btn-primary">Ayrintili Incele</a></p>
 			</div>
 		</div>
 
