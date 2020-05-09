@@ -2,7 +2,8 @@ from django.contrib import admin
 from django.utils.html import format_html
 from mptt.admin import MPTTModelAdmin, DraggableMPTTAdmin
 
-from product.models import Category, Product, Images
+from product.models import Category, Product, Images, Comment
+
 
 class ProductImageInline(admin.TabularInline):
     model = Images
@@ -37,18 +38,18 @@ class CategoryAdmin2(DraggableMPTTAdmin):
 
         # Add cumulative product count
         qs = Category.objects.add_related_count(
-                qs,
-                Product,
-                'category',
-                'products_cumulative_count',
-                cumulative=True)
+            qs,
+            Product,
+            'category',
+            'products_cumulative_count',
+            cumulative=True)
 
         # Add non cumulative product count
         qs = Category.objects.add_related_count(qs,
-                 Product,
-                 'category',
-                 'products_count',
-                 cumulative=False)
+                                                Product,
+                                                'category',
+                                                'products_count',
+                                                cumulative=False)
         return qs
 
     def related_products_count(self, instance):
@@ -59,7 +60,15 @@ class CategoryAdmin2(DraggableMPTTAdmin):
         return instance.products_cumulative_count
     related_products_cumulative_count.short_description = 'Related products (in tree)'
 
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ['subject', 'comment', 'product', 'user', 'status']
+    list_filter = ['status']
+
 
 admin.site.register(Category,CategoryAdmin2)
 admin.site.register(Product,ProductAdmin)
 admin.site.register(Images,ImagesAdmin)
+admin.site.register(Comment,CommentAdmin)
+
+
+
