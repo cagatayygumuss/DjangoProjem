@@ -49,6 +49,25 @@
 				<li class="nav-item"><a href="/hakkimizda" class="nav-link">Hakkımızda</a></li>
 				<li class="nav-item"><a href="/iletisim" class="nav-link">İletişim</a></li>
 				<li class="nav-item"><a href="/referanslar" class="nav-link">Referanslar</a></li>
+
+
+
+				{% if user.id is not None %}
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ user.username }}</a>
+					<div class="dropdown-menu" aria-labelledby="dropdown04">
+						<a class="dropdown-item" href="shop.html">My Account</a>
+						<a class="dropdown-item" href="wishlist.html">My Wishlist</a>
+						<a class="dropdown-item" href="product-single.html">My Orders</a>
+						<a class="dropdown-item" href="cart.html">My Comments</a>
+						<a class="dropdown-item" href="/logout/">Logout</a>
+					</div>
+				</li>
+				{% else %}
+				<li class="nav-item"><a href="/login/" class="text-uppercase">Login</a> / <a href="/signup/" class="text-uppercase">Sign Up</a></li>
+				{% endif %}
+
+
 				<li>
 
 					<form action="/search/" class="search-form" method="post">
@@ -60,12 +79,12 @@
 						<select name="catid" class="input search-categories">
 							<option value="0">All Categories</option>
 							{% recursetree category %}
-								{% if node.is_leaf_node %} <option value="{{ node.id }}">{{ node.title }}</option> {% endif %}
-								{% if not node.is_leaf_node %}
-									<optgroup label="{{ node.title }}">
-										{{ children }}
-									</optgroup>
-								{% endif %}
+							{% if node.is_leaf_node %} <option value="{{ node.id }}">{{ node.title }}</option> {% endif %}
+							{% if not node.is_leaf_node %}
+							<optgroup label="{{ node.title }}">
+								{{ children }}
+							</optgroup>
+							{% endif %}
 							{% endrecursetree %}
 						</select>
 
@@ -77,5 +96,6 @@
 
 			</ul>
 		</div>
+
 	</div>
 </nav>
