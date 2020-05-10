@@ -1,4 +1,10 @@
 {% load static %}
+{% load mptt_tags %}
+<!-- jQuery !-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"> </script>
+<!-- jQuery UI !-->
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	<div class="container">
 		<a class="navbar-brand" href="/">OPA Restaurant</a>
@@ -8,6 +14,23 @@
 
 		<div class="collapse navbar-collapse" id="ftco-nav">
 			<ul class="navbar-nav ml-auto">
+				<script>
+
+  $(function() {
+    $("#query").autocomplete({
+      source: "/search_auto/",
+      select: function (event, ui) { //item selected
+        AutoCompleteSelectHandler(event, ui)
+      },
+      minLength: 2,
+    });
+  });
+
+  function AutoCompleteSelectHandler(event, ui)
+  {
+    var selectedObj = ui.item;
+  }
+</script>
 
 				<li class="nav-item active"><a href="/" class="nav-link">Anasayfa</a></li>
 				<li class="nav-item dropdown">
@@ -27,13 +50,27 @@
 				<li class="nav-item"><a href="/iletisim" class="nav-link">İletişim</a></li>
 				<li class="nav-item"><a href="/referanslar" class="nav-link">Referanslar</a></li>
 				<li>
-              <form action="/search/" class="search-form" method="post">
-				  {% csrf_token %}
-                <div class="form-group">
-                  <span class="icon ion-ios-search"></span>
-                  <input name="query" type="text" class="form-control" placeholder="Search...">
-                </div>
-              </form>
+
+					<form action="/search/" class="search-form" method="post">
+						{% csrf_token %}
+						<div class="form-group">
+							<span class="icon ion-ios-search"></span>
+							<input name="query" id="query" type="text" class="form-control" placeholder="Search...">
+						</div>
+						<select name="catid" class="input search-categories">
+							<option value="0">All Categories</option>
+							{% recursetree category %}
+								{% if node.is_leaf_node %} <option value="{{ node.id }}">{{ node.title }}</option> {% endif %}
+								{% if not node.is_leaf_node %}
+									<optgroup label="{{ node.title }}">
+										{{ children }}
+									</optgroup>
+								{% endif %}
+							{% endrecursetree %}
+						</select>
+
+
+					</form>
 
 				</li>
 				<li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
