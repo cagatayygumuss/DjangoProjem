@@ -1,26 +1,23 @@
-
-
 from django.contrib import messages
 import json
-
 from django.contrib.auth import authenticate, logout, login
+from django.db.models import Count
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
-
+from order.models import ShopCartForm, ShopCart
 # Create your views here.
 from home.forms import SearchForm, SignUpForm
-from home.models import Setting, ContactFormMessage, ContactFormu
+from home.models import Setting, ContactFormMessage, ContactFormu, UserProfile
 from product.models import Category, Product, Images, Comment
-
-
 def index(request):
+    current_user = request.user
     setting = Setting.objects.get(pk=1)
     sliderdata = Product.objects.all()[:4]
     category = Category.objects.all()
     dayproducts = Product.objects.all()[:4]
     lastproducts = Product.objects.all().order_by('-id')[:4]
     randomproducts = Product.objects.all().order_by('?')[:4]
-
+    request.session['cart_items'] = ShopCart.objects.filter(user_id=current_user.id).count()
     context = {'setting': setting,
                'category': category,
                'page': 'home',
@@ -30,20 +27,14 @@ def index(request):
                'randomproducts': randomproducts
                }
     return render(request, 'index.html', context)
-
-
 def hakkimizda(request):
     setting = Setting.objects.get(pk=1)
     context = {'setting': setting}
     return render(request, 'hakkimizda.html', context)
-
-
 def referanslar(request):
     setting = Setting.objects.get(pk=1)
     context = {'setting': setting}
     return render(request, 'referanslar.html', context)
-
-
 def iletisim(request):
     if request.method == 'POST':
         form = ContactFormu(request.POST)
@@ -57,13 +48,10 @@ def iletisim(request):
             data.save()
             messages.success(request, "Mesajiniz basariyla gonderildi.")
             return HttpResponseRedirect('/iletisim')
-
     setting = Setting.objects.get(pk=1)
     form = ContactFormu()
     context = {'setting': setting, 'form': form}
     return render(request, 'iletisim.html', context)
-
-
 def category_products(request, id, slug):
     category = Category.objects.all()
     categorydata = Category.objects.get(pk=id)
@@ -73,7 +61,6 @@ def category_products(request, id, slug):
                'categorydata': categorydata
                }
     return render(request, 'products.html', context)
-
 def product_detail(request,id,slug):
     category = Category.objects.all()
     product = Product.objects.get(pk=id)
@@ -83,11 +70,8 @@ def product_detail(request,id,slug):
                'category': category,
                'images': images,
                'comments': comments,
-
                }
     return render(request, 'product_detail.html',context)
-
-
 def product_search(request):
     if request.method == 'POST':
         form = SearchForm(request.POST)
@@ -99,15 +83,11 @@ def product_search(request):
                 products = Product.objects.filter(title__icontains=query,)
             else:
                 products = Product.objects.filter(title__icontains=query,category_id=catid)
-
             context = {'products': products,
                        'category': category,
-
                        }
             return render(request, 'product_search.html' , context)
-
     return  HttpResponseRedirect('/')
-
 def product_search_auto(request):
     if request.is_ajax():
         q = request.GET.get('term','')
@@ -122,11 +102,9 @@ def product_search_auto(request):
         data = 'fail'
     mimetype = 'application/json'
     return  HttpResponse(data, mimetype)
-
 def logout_view(request):
     logout(request)
     return  HttpResponseRedirect('/')
-
 def login_view(request):
     if request.method == 'POST':
         username=request.POST['username']
@@ -135,17 +113,13 @@ def login_view(request):
         if user is not None:
             login(request, user)
             return  HttpResponseRedirect('/')
-
         else:
             messages.warning(request, "Login Hatası ! Kullanıcı adı ya da Şifre yanlış")
             return HttpResponseRedirect('/login')
-
-
     category=Category.objects.all()
     context={ 'category': category,
               }
     return render(request, 'login.html', context)
-
 def signup_view(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
@@ -155,12 +129,37 @@ def signup_view(request):
             password =  form.cleaned_data.get('password1')
             user=authenticate(request, username=username, password=password)
             login(request, user)
+            current_user = request.user
+            data=UserProfile()
+            data.user_id=current_user.id
+            data.image="images/users/user.png"
+            data.save()
+            messages.success(request, "Tebikler islem basarili")
             return HttpResponseRedirect('/')
-
-
     form=SignUpForm()
     category=Category.objects.all()
     context={'category': category,
              'form': form,
              }
     return render(request, 'signup.html', context)
+# def menu(request,id):
+    try:
+        content = Content.objects.get(menu_id=id)
+        link = '/content/' + str(content.id) + '/menu'
+        return HttpResponseRedirect(link)
+    except:
+        messages.warning(request,"Hata! Ilgili icerik bulunamadi")
+        link='/error'
+        return HttpResponseRedirect(link)
+# def contentdetail (request,id,slug):
+#    category = Category.objects.all()
+ #   menu = Menu.objects.all()
+  #  try:
+   #     content = Content.objects.get(pk=id)
+    #    images = Images.objects.filter (content_id=id)
+     #   content = {
+      #      'content' : content,
+       #     'category':category,
+        #    'menu':menu,
+         #   'images':images,
+        # }
