@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f129ca52-837f-47cb-8124-912ad8f9abb3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/user/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/templates/change_password.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/templates/user_update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/templates/user_order_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/templates/user_orders.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/templates/Order_Form.html" beforeDir="false" afterPath="$PROJECT_DIR$/order/templates/Order_Form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/user_panel.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_panel.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -138,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589751327014</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="uye bilgileri, sifre guncelleme">
+      <created>1589790297330</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1589790297330</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -163,7 +169,8 @@
     <MESSAGE value="akilli arama ozelligi eklendi" />
     <MESSAGE value="login ve logout vesselam, hayirli ramazanlar" />
     <MESSAGE value="Urun Sepete Ekleme ve siparis. Bir suredir commit etmeyi unutmusum hay allah" />
-    <option name="LAST_COMMIT_MESSAGE" value="Urun Sepete Ekleme ve siparis. Bir suredir commit etmeyi unutmusum hay allah" />
+    <MESSAGE value="uye bilgileri, sifre guncelleme" />
+    <option name="LAST_COMMIT_MESSAGE" value="uye bilgileri, sifre guncelleme" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="74" key="#Inspections" timestamp="1588926080098">
@@ -182,18 +189,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="526" y="222" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1589631279520" />
-    <state x="436" y="11" key="CommitChangelistDialog2" timestamp="1589751326404">
+    <state x="436" y="11" key="CommitChangelistDialog2" timestamp="1589790296833">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="436" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589751326404" />
+    <state x="436" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589790296833" />
     <state x="86" y="194" width="1350" height="638" key="DiffContextDialog" timestamp="1589033920250">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="86" y="194" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1589033920250" />
-    <state x="549" y="170" key="FileChooserDialogImpl" timestamp="1589783576329">
+    <state x="549" y="170" key="FileChooserDialogImpl" timestamp="1589821923232">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1589783576329" />
+    <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1589821923232" />
     <state x="637" y="126" key="RollbackChangesDialog" timestamp="1589033899366">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
