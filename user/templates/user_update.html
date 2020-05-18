@@ -11,7 +11,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Vegefoods - Free Bootstrap 4 Template by Colorlib</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -45,7 +44,7 @@
 		<div class="row no-gutters slider-text align-items-center justify-content-center">
 			<div class="col-md-9 ftco-animate text-center">
 				<p class="breadcrumbs"><span class="mr-2"><a href="/">Anasayfa</a></span> <span>User Profile</span></p>
-				<h1 class="mb-0 bread">User Information</h1>
+				<h1 class="mb-0 bread">Update Information</h1>
 			</div>
 		</div>
 	</div>
@@ -60,41 +59,20 @@
 						<th>Yakisiklinin fotosu</th>
 						<td class="image-prod"><img src="{{ user.userprofile.image.url }}" width="200" height="200"></td>
 					</tr>
-					<tr>
-						<th>Username</th>
-						<td>{{ profile.user.username }}</td>
-					</tr>
-					<tr>
-						<th>Email</th> <td>{{ profile.user.email }}</td>
-					</tr>
-					<tr>
-						<th>Phone</th>
-						<td> {{ profile.phone }}
-						</td>
-					</tr>
-					<tr>
-						<th>Address</th>
-						<td>
-							{{ profile.address }}
-						</td>
-					</tr>
-					<tr>
-						<th>City</th>
-						<td>
-							{{ profile.city }}
-						</td>
-					</tr>
-					<tr>
-						<th>Country</th>
-
-						<td> {{ profile.country }} </td>
-
-					</tr>
-
+					<form method="POST" enctype="multipart/form-data">
+						{% csrf_token %}
+						<fieldset class="form-group">
+							{{ user_form.as_p }}
+							{{ profile_form.as_p }}
+						</fieldset>
+						<div class="form-group">
+							<!-- <button class="btn btn-outline-info" type="submit">Update</button> -->
+						</div>
+					</form>
 				</table>
 				<th>
-					<a href="/user/update" class="primary-btn">Update Profile</a>
-				<!--	<a href="/user/password" class="primary-btn">Change Password</a> -->
+					<button type="submit" class="primary-btn" >Update Info</button>
+					<!--	<a href="/user/password" class="primary-btn">Change Password</a> -->
 				</th>
 			</div>
 			<div class="col-lg-3 sidebar ftco-animate">
