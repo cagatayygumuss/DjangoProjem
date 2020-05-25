@@ -83,7 +83,7 @@
 					<form action="/order/addtocart/{{ product.id }}" method="post">
 						{% csrf_token %}
 						<div class="input-group col-md-6 d-flex mb-3">
-							<input type="number" id="quantity" name="quantity" class="input" value="Adet" min="1" max="{{ product.amount }}">
+							<input type="number" id="quantity" name="quantity" placeholder="1" class="input" value="Adet" min="1" max="{{ product.amount }}">
 						</div>
 
 						<button type="submit">Add to Cart</button>
