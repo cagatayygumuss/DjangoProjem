@@ -1,8 +1,8 @@
 {% extends 'homebase.html' %}
 {% load static %}
-{% block title %} Order Detail - {{ setting.company }} {% endblock %}
-{% block keywords %} {{ setting.keywords }}   {% endblock %}
-{% block description %} {{ setting.description }}  {% endblock %}
+{% block title %} Products Search Results {% endblock %}
+{% block keywords %} {{ categorydata.keywords }}   {% endblock %}
+{% block description %} {{ categorydata.description }}  {% endblock %}
 {% block head %}
 <link rel='shortcut icon' type='image/x-icon' href='{{setting.icon.url}}' />
 {% endblock %}
@@ -11,7 +11,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<!-- <title>Vegefoods - Free Bootstrap 4 Template by Colorlib</title> -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -42,108 +41,60 @@
 
 <div >
 	<div class="container">
-		<div class="col-md-9 ftco-animate text-center">
-			<h1 class="mb-0 bread">User Shipping Info</h1>
-		</div>
-		<table class="table">
-			<th>Username</th>
-			<td>{{ order.user.username }}</td>
-			</tr>
-			<tr>
-				<th>Email</th> <td>{{ order.user.email }}</td>
-			</tr>
-			<tr>
-				<th>Phone</th>
-				<td> {{ order.phone }}
-				</td>
-			</tr>
-			<tr>
-				<th>Address</th>
-				<td>
-					{{ order.address }}
-				</td>
-			</tr>
-			<tr>
-				<th>City</th>
-				<td>
-					{{ order.city }}
-				</td>
-			</tr>
-			<tr>
-				<th>Country</th>
-
-				<td> {{ order.country }} </td>
-
-			</tr>
-			<tr>
-				<th>Status</th>
-
-				<td> {{ order.status }} </td>
-
-			</tr>
-			<tr>
-				<th>Order Date</th>
-
-				<td> {{ order.create_at }} </td>
-
-			</tr>
-			<tr>
-				<th>Delivering Note</th>
-
-				<td> {{ order.adminnote }} </td>
-
-			</tr>
-
-		</table>
 		<div class="row no-gutters slider-text align-items-center justify-content-center">
 			<div class="col-md-9 ftco-animate text-center">
-				<p class="breadcrumbs"><span class="mr-2"><a href="/">Anasayfa</a></span> <span>User Profile</span></p>
-				<h1 class="mb-0 bread">User Order List</h1>
+				<p class="breadcrumbs"><span class="mr-2"><a href="/">Anasayfa</a></span></p>
+				<h1 class="mb-0 bread">Sikca Sorulan Sorular</h1>
 			</div>
 		</div>
 	</div>
 </div>
 
-<section class="ftco-section ftco-degree-bg">
+<section class="ftco-section contact-section bg-light">
 	<div class="container">
-		<div class="row">
-			<div class="col-lg-9 ftco-animate">
-				<table class="table">
-					<tr>
-						<th class="text-left">Id</th>
-						<th class="text-left">Product Name</th>
-						<th class="text-left">Price</th>
-						<th class="text-left">Quantity</th>
-						<th class="text-left">Amount</th>
-						<th class="text-left">Status</th>
-						<th class="text-left">Date</th>
+		<div class="row d-flex mb-5 contact-info">
+			<div class="w-100"></div>
+
+			<div class="info bg-white p-4">
+				<section class="ftco-section ftco-cart">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 ftco-animate">
+								<div class="cart-list">
+									<table class="table">
+										<thead class="thead-primary">
 
 
-					</tr>
-					{% for rs in orders %}
-					<tr>
-						<td class="text-left">
-							<a href="/product/{{ rs.product.id }}/{{ rs.product.slug }}"><img src="{{ rs.product.image.url }}" height="80"></a>
-						</td>
-						<td class="text-left">{{ rs.product.title }}</td>
-						<td class="text-left">{{ rs.price }}</td >
-						<td class="text-left">{{ rs.quantity }}</td>
-						<td class="text-left">{{ rs.amount }}</td>
-						<td class="text-left">{{ rs.status }}</td>
-						<td class="text-left">{{ rs.create_at }}</td>
-					</tr>
-					{% endfor %}
-				</table>
+										<tr class="text-center">
+											<th>Soru</th>
+											<th>Cevap</th>
+										</tr>
+										</thead>
+										<tbody>
+										{% for rs in faq %}
+										<td class="price">{{ rs.question }}</td>
+										<td class="price">{{ rs.answer }}</td>
+
+										</tr><!-- END TR-->
+										{% endfor %}
+
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+					</div>
 			</div>
-
-
-
-			<div class="col-lg-3 sidebar ftco-animate">
-				{% include "user_panel.html" %}
-			</div>
-		</div>
-	</div>
 </section>
+
+</div>
+
+
+</div>
+</div>
+</section>
+
 
 
 <script src="js/jquery.min.js"></script>

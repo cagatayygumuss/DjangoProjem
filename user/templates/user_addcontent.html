@@ -1,17 +1,19 @@
 {% extends 'homebase.html' %}
 {% load static %}
-{% block title %} Order Detail - {{ setting.company }} {% endblock %}
+{% block title %} User Orders List - {{ setting.company }} {% endblock %}
 {% block keywords %} {{ setting.keywords }}   {% endblock %}
 {% block description %} {{ setting.description }}  {% endblock %}
 {% block head %}
 <link rel='shortcut icon' type='image/x-icon' href='{{setting.icon.url}}' />
 {% endblock %}
-
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="{% static "ckeditor/ckeditor-init.js" %}"></script>
+<script type="text/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
 {% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<!-- <title>Vegefoods - Free Bootstrap 4 Template by Colorlib</title> -->
+	<title>Vegefoods - Free Bootstrap 4 Template by Colorlib</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -42,63 +44,10 @@
 
 <div >
 	<div class="container">
-		<div class="col-md-9 ftco-animate text-center">
-			<h1 class="mb-0 bread">User Shipping Info</h1>
-		</div>
-		<table class="table">
-			<th>Username</th>
-			<td>{{ order.user.username }}</td>
-			</tr>
-			<tr>
-				<th>Email</th> <td>{{ order.user.email }}</td>
-			</tr>
-			<tr>
-				<th>Phone</th>
-				<td> {{ order.phone }}
-				</td>
-			</tr>
-			<tr>
-				<th>Address</th>
-				<td>
-					{{ order.address }}
-				</td>
-			</tr>
-			<tr>
-				<th>City</th>
-				<td>
-					{{ order.city }}
-				</td>
-			</tr>
-			<tr>
-				<th>Country</th>
-
-				<td> {{ order.country }} </td>
-
-			</tr>
-			<tr>
-				<th>Status</th>
-
-				<td> {{ order.status }} </td>
-
-			</tr>
-			<tr>
-				<th>Order Date</th>
-
-				<td> {{ order.create_at }} </td>
-
-			</tr>
-			<tr>
-				<th>Delivering Note</th>
-
-				<td> {{ order.adminnote }} </td>
-
-			</tr>
-
-		</table>
 		<div class="row no-gutters slider-text align-items-center justify-content-center">
 			<div class="col-md-9 ftco-animate text-center">
-				<p class="breadcrumbs"><span class="mr-2"><a href="/">Anasayfa</a></span> <span>User Profile</span></p>
-				<h1 class="mb-0 bread">User Order List</h1>
+				<p class="breadcrumbs"><span class="mr-2"><a href="/">Anasayfa</a></span> <span>User Contents</span></p>
+				<h1 class="mb-0 bread">User Content List</h1>
 			</div>
 		</div>
 	</div>
@@ -107,40 +56,31 @@
 <section class="ftco-section ftco-degree-bg">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-9 ftco-animate">
-				<table class="table">
-					<tr>
-						<th class="text-left">Id</th>
-						<th class="text-left">Product Name</th>
-						<th class="text-left">Price</th>
-						<th class="text-left">Quantity</th>
-						<th class="text-left">Amount</th>
-						<th class="text-left">Status</th>
-						<th class="text-left">Date</th>
-
-
-					</tr>
-					{% for rs in orders %}
-					<tr>
-						<td class="text-left">
-							<a href="/product/{{ rs.product.id }}/{{ rs.product.slug }}"><img src="{{ rs.product.image.url }}" height="80"></a>
-						</td>
-						<td class="text-left">{{ rs.product.title }}</td>
-						<td class="text-left">{{ rs.price }}</td >
-						<td class="text-left">{{ rs.quantity }}</td>
-						<td class="text-left">{{ rs.amount }}</td>
-						<td class="text-left">{{ rs.status }}</td>
-						<td class="text-left">{{ rs.create_at }}</td>
-					</tr>
-					{% endfor %}
-				</table>
-			</div>
-
-
-
-			<div class="col-lg-3 sidebar ftco-animate">
+			<div class="col-lg-3">
 				{% include "user_panel.html" %}
 			</div>
+			<div class="col-lg-9">
+				<div class="section-title">
+					<h4 class="title">User Contents List <a class="primary-btn" href="/user/addcontent">Add Content</a> </h4>
+				</div>
+				<div>
+					{% load static %}
+					<form method="post" enctype="multipart/form-data">
+						{% csrf_token %}
+						<fieldset class="form-group">
+							{{ form.media }}
+							{{ form.as_p }}
+						</fieldset>
+						<div class="form-group">
+							<button class="primary-btn" type="submit"> SAVE </button>
+						</div>
+					</form>
+				</div>
+			</div>
+
+
+
+
 		</div>
 	</div>
 </section>

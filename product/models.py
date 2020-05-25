@@ -27,7 +27,7 @@ class Category(MPTTModel):
    def __str__(self):
       return self.title
 
-   def _str_(self):
+   def __str__(self):
       full_path = [self.title]
       k = self.parent
       while k is not None:

@@ -4,16 +4,23 @@ from django.contrib.auth import authenticate, logout, login
 from django.db.models import Count
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
+
+from content.models import Menu, Content
 from order.models import ShopCartForm, ShopCart
 # Create your views here.
 from home.forms import SearchForm, SignUpForm
 from home.models import Setting, ContactFormMessage, ContactFormu, UserProfile
 from product.models import Category, Product, Images, Comment
+
+
 def index(request):
     current_user = request.user
     setting = Setting.objects.get(pk=1)
     sliderdata = Product.objects.all()[:4]
     category = Category.objects.all()
+    menu = Menu.objects.all()
+    news = Content.objects.filter(type='haber',status='True').order_by('-id')[:4]
+    announcements = Content.objects.filter(type='duyuru',status='True').order_by('-id')[:4]
     dayproducts = Product.objects.all()[:4]
     lastproducts = Product.objects.all().order_by('-id')[:4]
     randomproducts = Product.objects.all().order_by('?')[:4]
@@ -22,19 +29,25 @@ def index(request):
                'category': category,
                'page': 'home',
                'sliderdata': sliderdata,
+               'news':news,
+               'menu':menu,
+               'announcements':announcements,
                'dayproducts': dayproducts,
                'lastproducts': lastproducts,
                'randomproducts': randomproducts
                }
-    return render(request, 'index.html', context)
+    return render (request, 'index.html', context)
+
 def hakkimizda(request):
     setting = Setting.objects.get(pk=1)
     context = {'setting': setting}
     return render(request, 'hakkimizda.html', context)
+
 def referanslar(request):
     setting = Setting.objects.get(pk=1)
     context = {'setting': setting}
     return render(request, 'referanslar.html', context)
+
 def iletisim(request):
     if request.method == 'POST':
         form = ContactFormu(request.POST)
@@ -52,6 +65,7 @@ def iletisim(request):
     form = ContactFormu()
     context = {'setting': setting, 'form': form}
     return render(request, 'iletisim.html', context)
+
 def category_products(request, id, slug):
     category = Category.objects.all()
     categorydata = Category.objects.get(pk=id)
@@ -61,17 +75,23 @@ def category_products(request, id, slug):
                'categorydata': categorydata
                }
     return render(request, 'products.html', context)
+
 def product_detail(request,id,slug):
     category = Category.objects.all()
-    product = Product.objects.get(pk=id)
-    images = Images.objects.filter(product_id=id)
-    comments = Comment.objects.filter(product_id=id, status='True')
-    context = {'product': product,
-               'category': category,
-               'images': images,
-               'comments': comments,
-               }
-    return render(request, 'product_detail.html',context)
+    try:
+        product = Product.objects.get(pk=id)
+        images = Images.objects.filter(product_id=id)
+        comments = Comment.objects.filter(product_id=id, status='True')
+        context = {'product': product,
+                   'category': category,
+                   'images': images,
+                   'comments': comments,
+                   }
+        return render(request, 'product_detail.html',context)
+    except:
+        link = '/error'
+        return HttpResponseRedirect(link)
+
 def product_search(request):
     if request.method == 'POST':
         form = SearchForm(request.POST)
@@ -88,6 +108,7 @@ def product_search(request):
                        }
             return render(request, 'product_search.html' , context)
     return  HttpResponseRedirect('/')
+
 def product_search_auto(request):
     if request.is_ajax():
         q = request.GET.get('term','')
@@ -120,6 +141,7 @@ def login_view(request):
     context={ 'category': category,
               }
     return render(request, 'login.html', context)
+
 def signup_view(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
@@ -134,7 +156,6 @@ def signup_view(request):
             data.user_id=current_user.id
             data.image="images/users/user.png"
             data.save()
-            messages.success(request, "Tebikler islem basarili")
             return HttpResponseRedirect('/')
     form=SignUpForm()
     category=Category.objects.all()
@@ -142,24 +163,42 @@ def signup_view(request):
              'form': form,
              }
     return render(request, 'signup.html', context)
-# def menu(request,id):
+
+def menu(request,id):
     try:
-        content = Content.objects.get(menu_id=id)
+        content= Content.objects.get(menu_id=id)
         link = '/content/' + str(content.id) + '/menu'
         return HttpResponseRedirect(link)
     except:
-        messages.warning(request,"Hata! Ilgili icerik bulunamadi")
-        link='/error'
+        link = '/error'
         return HttpResponseRedirect(link)
-# def contentdetail (request,id,slug):
-#    category = Category.objects.all()
- #   menu = Menu.objects.all()
-  #  try:
-   #     content = Content.objects.get(pk=id)
-    #    images = Images.objects.filter (content_id=id)
-     #   content = {
-      #      'content' : content,
-       #     'category':category,
-        #    'menu':menu,
-         #   'images':images,
-        # }
+
+        #messages.warning(request,"Hata! Ilgili icerik bulunamadi")
+def contentdetail (request,id,slug):
+    category = Category.objects.all()
+    menu = Menu.objects.all()
+    try:
+        content = Content.objects.get(pk=id)
+        images = Images.objects.filter (content_id=id)
+        context = {
+            'content' : content,
+            'category': category,
+            'menu':menu,
+            'images':images,
+        }
+        return render(request,'content_detail.html',context)
+    except:
+        link = '/error'
+        return HttpResponseRedirect(link)
+
+
+def error(request):
+    category = Category.objects.all()
+    menu = Menu.objects.all()
+    context = {
+
+        'category': category,
+        'menu': menu,
+
+    }
+    return render(request, 'error_page.html', context)
