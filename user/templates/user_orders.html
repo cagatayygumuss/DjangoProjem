@@ -63,7 +63,6 @@
 						<th class="text-left">Total</th>
 						<th class="text-left">Status</th>
 						<th class="text-left">Date</th>
-						<th class="text-left">Detail</th>
 
 
 					</tr>
@@ -75,13 +74,11 @@
 						<td class="text-left">{{ rs.total }}</td>
 						<td class="text-left">{{ rs.status }}</td>
 						<td class="text-left">{{ rs.create_at }}</td>
-						<td class="text-left"><a class="btn-default" href="/user/orderdetail/{{ rs.id }}">Detay </a></td>
+
 					</tr>
 					{% endfor %}
 				</table>
 			</div>
-
-
 
 			<div class="col-lg-3 sidebar ftco-animate">
 				{% include "user_panel.html" %}
@@ -89,7 +86,6 @@
 		</div>
 	</div>
 </section>
-
 
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery-migrate-3.0.1.min.js"></script>
