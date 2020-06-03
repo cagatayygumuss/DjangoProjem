@@ -2,44 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f129ca52-837f-47cb-8124-912ad8f9abb3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/uploads/images/188x147-corba-ekmeginde-ispanakli-levrek-1555332639122.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/188x147-roka-pestolu-minekop-1577953021445.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/812x467-1555415043542.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/812x467-susamli-somon-1555414888413.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/812x467-uzak-dogu-usulu-somon-baligi-tarifi-1580718453115.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/bayat-ekmek-corbasi-36c7ed35-22eb-4ca7-bc19-bfcecd2c413c.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/bayat-ekmek-corbasi-36c7ed35-22eb-4ca7-bc19-bfcecd2c413c_W8VGZ0k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/cevizli-un-helvasi-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/cevizli-un-helvasi-tarifi-videosu-fotografi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/cevizli-un-helvasi-tarifi-videosu-fotografi_stOHZ5h.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/download_6EtSLAy.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/download_7EQ0F6p.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/download_As1gLlv.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/download_GZE1iTU.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/download_I6LxAlq.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/download_kysGlGQ.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/download_kza6qTu.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/download_sJQmYmR.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/download_tJhyIAC.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/download_wZ1xOBx.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/eristeli_yesil_mercimek-8f441a3f-9611-4c01-aa82-58168f3c1167.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/etimek-tatlisi-resimli-yemek-tarifi11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/kibris-tatlisi-videolu-600x400.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/kirmizi-lahana-salatasi-2.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/kirmizi-lahana-salatasi-3.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/sehriyeli-tavuk-corbasi-859b8560-88fc-43c2-9a8c-69937529033a.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/terbiyelipalamut-corbasi-4f4f2012-d6d5-4334-a99a-cd76ec3294b6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/tursu-tadinda-mor-lahana-salatasi1.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/tursu-tadinda-mor-lahana-salatasi4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/11934536_971125392910337_2864767784106210780_o.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/downloaded_1.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/content.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/hakkimizda.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/hakkimizda.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/product_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/product_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/products.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/templates/Order_Form.html" beforeDir="false" afterPath="$PROJECT_DIR$/order/templates/Order_Form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/templates/order_completed.html" beforeDir="false" afterPath="$PROJECT_DIR$/order/templates/order_completed.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_comments.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_comments.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_orders.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_orders.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_panel.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_panel.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590433824567</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="site tamamlandi/ yeni urunler eklendi">
+      <created>1591118515800</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1591118515800</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -230,7 +208,8 @@
     <MESSAGE value="32 tamam ama hala bazi sorunlar var. Houston we have a problem" />
     <MESSAGE value="Site uzerinde hata gidermeleri yapildi" />
     <MESSAGE value="Duzeltmeler yapildi" />
-    <option name="LAST_COMMIT_MESSAGE" value="Duzeltmeler yapildi" />
+    <MESSAGE value="site tamamlandi/ yeni urunler eklendi" />
+    <option name="LAST_COMMIT_MESSAGE" value="site tamamlandi/ yeni urunler eklendi" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="74" key="#Inspections" timestamp="1588926080098">
@@ -249,10 +228,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="526" y="222" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1589631279520" />
-    <state x="436" y="11" key="CommitChangelistDialog2" timestamp="1590433824092">
+    <state x="436" y="11" key="CommitChangelistDialog2" timestamp="1591118515249">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="436" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1590433824092" />
+    <state x="436" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1591118515249" />
     <state x="86" y="194" width="1350" height="638" key="DiffContextDialog" timestamp="1589033920250">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
