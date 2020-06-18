@@ -54,35 +54,37 @@
 <section class="ftco-section ftco-degree-bg">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-9 ftco-animate">
+			<div class="col-lg-4 sidebar ftco-animate">
+				{% include "user_panel.html" %}
+			</div>
+			<div class="col-lg-8 ftco-animate">
 				<table class="table">
 					<tr>
 						<th class="text-left">Id</th>
-						<th class="text-left">First Name</th>
-						<th class="text-left">Last Name</th>
+						<th class="text-left"> Name</th>
+
 						<th class="text-left">Total</th>
 						<th class="text-left">Status</th>
 						<th class="text-left">Date</th>
+						<th class="text-left">Detail</th>
 
 
 					</tr>
 					{% for rs in orders %}
 					<tr>
 						<td class="text-left">{{ rs.id }}</td>
-						<td class="text-left">{{ rs.first_name }}</td>
-						<td class="text-left">{{ rs.last_name }}</td >
+						<td class="text-left">{{ rs.first_name }} {{ rs.last_name }}</td>
 						<td class="text-left">{{ rs.total }}</td>
 						<td class="text-left">{{ rs.status }}</td>
 						<td class="text-left">{{ rs.create_at }}</td>
+						<td class="text-left"><a class="btn-default" href="/user/orderdetail/{{ rs.id }}">Detay </a></td>
 
 					</tr>
 					{% endfor %}
 				</table>
 			</div>
 
-			<div class="col-lg-3 sidebar ftco-animate">
-				{% include "user_panel.html" %}
-			</div>
+
 		</div>
 	</div>
 </section>

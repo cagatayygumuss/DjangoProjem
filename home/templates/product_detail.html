@@ -1,17 +1,24 @@
 {% extends 'homebase.html' %}
 {% load static %}
-{% block title %} {{ product.title }} - OPA {% endblock %}
+{% block title %} {{ product.title }} {% endblock %}
 {% block keywords %} {{ product.keywords }}   {% endblock %}
 {% block description %} {{ product.description }}  {% endblock %}
 {% block head %}
 <link rel='shortcut icon' type='image/x-icon' href='{{setting.icon.url}}' />
 {% endblock %}
-{%%}
+
 {% block content %}
 
 <div >
 	<div class="container">
 		<div class="row no-gutters slider-text align-items-center justify-content-center">
+			{% if messages %}
+				{% for message in messages %}
+				<div class="alert alert-{{message.tags}}" role="alert">
+					{{ message }}
+				</div>
+				{% endfor %}
+				{% endif %}
 			<div class="col-md-9 ftco-animate text-center">
 				<p class="breadcrumbs"><span class="mr-2"><a href="/">Anasayfa</a></span> <span><a href="/category/{{ product.category_id }}/{{ product.category.slug }}">{{ product.category }}</a></span></p>
 				<h1 class="mb-0 bread">{{ product.title }}</h1>
@@ -53,7 +60,7 @@
 					<form action="/order/addtocart/{{ product.id }}" method="post">
 						{% csrf_token %}
 						<div class="input-group col-md-6 d-flex mb-3">
-							<input type="number" id="quantity" name="quantity" placeholder="1" class="input" value="Adet" min="1" max="{{ product.amount }}">
+							<input type="number" id="quantity" name="quantity" value="1" class="input" value="Adet" min="1" max="{{ product.amount }}">
 						</div>
 
 						<button type="submit">Add to Cart</button>
@@ -66,13 +73,7 @@
 			</div>
 
 			<div class="col-md-6">
-				{% if messages %}
-				{% for message in messages %}
-				<div class="alert alert-{{message.tags}}" role="alert">
-					{{ message }}
-				</div>
-				{% endfor %}
-				{% endif %}
+
 
 				<div class="pt-5 mt-5">
 					<h3 class="mb-5">Comments</h3>

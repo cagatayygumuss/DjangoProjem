@@ -7,7 +7,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-        <a class="navbar-brand" href="/">OPA Restaurant</a>
+        <a class="navbar-brand" href="/">Library</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
         </button>
@@ -61,7 +61,7 @@
                     <form action="/search/" class="search-form" method="post">
                         {% csrf_token %}
                         <div class="form-group">
-                            <span class="icon ion-ios-search"></span>
+                           <!-- <span class="icon ion-ios-search"></span> -->
                             <input name="query" id="query" type="text" class="form-control" placeholder="Search...">
                         </div>
                         <select name="catid" class="input search-categories">

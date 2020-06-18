@@ -54,10 +54,13 @@
 <section class="ftco-section ftco-degree-bg">
 	<div class="container">
 		<div class="row">
+			<div class="col-lg-3 sidebar ftco-animate">
+				{% include "user_panel.html" %}
+			</div>
 			<div class="col-lg-9 ftco-animate">
 				<table class="table">
 					<tr>
-						<th>Yakisiklinin fotosu</th>
+						<th>Profil Fotoğrafı</th>
 						<td class="image-prod"><img src="{{ user.userprofile.image.url }}" width="200" height="200"></td>
 					</tr>
 					<tr>
@@ -94,12 +97,10 @@
 				</table>
 				<th>
 					<a href="/user/update" class="primary-btn">Update Profile</a>
-				<!--	<a href="/user/password" class="primary-btn">Change Password</a> -->
+					<!--	<a href="/user/password" class="primary-btn">Change Password</a> -->
 				</th>
 			</div>
-			<div class="col-lg-3 sidebar ftco-animate">
-				{% include "user_panel.html" %}
-			</div>
+
 		</div>
 	</div>
 </section>

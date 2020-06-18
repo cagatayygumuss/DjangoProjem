@@ -2,15 +2,103 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f129ca52-837f-47cb-8124-912ad8f9abb3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/uploads/images/11934536_971125392910337_2864767784106210780_o.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/downloaded_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/migrations/0014_auto_20200618_1532.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/migrations/0015_auto_20200618_1535.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/Resim_1441897915.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/ansiklopedi.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/ansiklopedi_9NWrrxC.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/box_open.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/dergi.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/ozdemir2.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/oğuzz.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/spor.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/tehlıke2.jfif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/tehlıke3.jfif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/tehlıke4.jfif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/turgut2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/turgut3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/turgut4.jfif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/turgut_uyar_göğe_bakma_duragı.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/tut2.jfif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/tut3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/tut4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/tut5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/tutunamayanlar.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/türk.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/users/IMG-20191116-WA0041.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/çiçek3.jfif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/çiçek_senfonisi.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/özdemir1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/Şeker_Portakalı.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/şeker1.jfif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/şeker2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/şeker3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/şiir.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/content.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/content_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/content_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/error_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/error_page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/hakkimizda.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/hakkimizda.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/product_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/product_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/products.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/sidebar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/slider.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/slider.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/templates/Order_Form.html" beforeDir="false" afterPath="$PROJECT_DIR$/order/templates/Order_Form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/templates/Shopcart_products.html" beforeDir="false" afterPath="$PROJECT_DIR$/order/templates/Shopcart_products.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/templates/order_completed.html" beforeDir="false" afterPath="$PROJECT_DIR$/order/templates/order_completed.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/11934536_971125392910337_2864767784106210780_o.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/188x147-corba-ekmeginde-ispanakli-levrek-1555332639122.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/188x147-roka-pestolu-minekop-1577953021445.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/20382848503115.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/812x467-1555415043542.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/812x467-susamli-somon-1555414888413.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/812x467-uzak-dogu-usulu-somon-baligi-tarifi-1580718453115.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/IMG_0157.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/IMG_2755.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/IMG_2755_1TB25MY.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/IMG_2873.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/IMG_2880.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/bayat-ekmek-corbasi-36c7ed35-22eb-4ca7-bc19-bfcecd2c413c.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/bayat-ekmek-corbasi-36c7ed35-22eb-4ca7-bc19-bfcecd2c413c_W8VGZ0k.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/cevizli-un-helvasi-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/cevizli-un-helvasi-tarifi-videosu-fotografi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/cevizli-un-helvasi-tarifi-videosu-fotografi_stOHZ5h.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/download.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/download_6EtSLAy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/download_7EQ0F6p.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/download_As1gLlv.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/download_GZE1iTU.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/download_I6LxAlq.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/download_kysGlGQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/download_kza6qTu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/download_sJQmYmR.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/download_tJhyIAC.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/download_wZ1xOBx.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/downloaded_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/eristeli_yesil_mercimek-8f441a3f-9611-4c01-aa82-58168f3c1167.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/etimek-tatlisi-resimli-yemek-tarifi11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/izgaratavuk.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/kibris-tatlisi-videolu-600x400.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/kirmizi-lahana-salatasi-2.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/kirmizi-lahana-salatasi-3.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/pilic-but-izgara.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/pilic-but-izgara_DeRxRfv.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/sehriyeli-tavuk-corbasi-859b8560-88fc-43c2-9a8c-69937529033a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/tavuk-fileto-nedir-nasil-pisirilir-besin-degerleri-nelerdir--1463741602.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/tavuk-fileto-nedir-nasil-pisirilir-besin-degerleri-nelerdir--1463741602_U2GFvd5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/tavuk-fileto-nedir-nasil-pisirilir-besin-degerleri-nelerdir--1463741602_kV5QKJO.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/tavukizgara.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/terbiyelipalamut-corbasi-4f4f2012-d6d5-4334-a99a-cd76ec3294b6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/tursu-tadinda-mor-lahana-salatasi1.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/tursu-tadinda-mor-lahana-salatasi4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/unnamed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/unnamed_U1HELeu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/user_order_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_order_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/user_orders.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_orders.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/user_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/user_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_update.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +123,6 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -43,7 +130,14 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/order/templates" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -65,6 +159,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585429748132</updated>
+      <workItem from="1591470309119" duration="30000" />
+      <workItem from="1591470345917" duration="1830000" />
+      <workItem from="1591835872742" duration="242000" />
+      <workItem from="1592483357419" duration="2275000" />
     </task>
     <task id="LOCAL-00001" summary="CkEditor eklendi">
       <created>1586760222004</created>
@@ -178,8 +276,18 @@
       <option name="project" value="LOCAL" />
       <updated>1591118515800</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="site tamamlandi/ yeni urunler eklendi">
+      <created>1591206549437</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1591206549437</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -228,18 +336,19 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="526" y="222" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1589631279520" />
-    <state x="436" y="11" key="CommitChangelistDialog2" timestamp="1591118515249">
+    <state x="436" y="11" key="CommitChangelistDialog2" timestamp="1591206548749">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="436" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1591118515249" />
+    <state x="436" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1591206548749" />
     <state x="86" y="194" width="1350" height="638" key="DiffContextDialog" timestamp="1589033920250">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="86" y="194" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1589033920250" />
-    <state x="549" y="170" key="FileChooserDialogImpl" timestamp="1589821923232">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="686" y="215" key="FileChooserDialogImpl" timestamp="1591470338092">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1589821923232" />
+    <state x="686" y="215" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1591470338092" />
     <state x="637" y="126" key="RollbackChangesDialog" timestamp="1589033899366">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -248,6 +357,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="279" y="58" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1586968911802" />
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1591206578490">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1591206578490" />
     <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1586968967560">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
